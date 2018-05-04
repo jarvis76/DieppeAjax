@@ -3,8 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Dieppe Ajax</title>
+
+    <script type="text/javascript" src="./functions/xhrFunction.js"></script>
+
 </head>
 <body>
+<script type="text/javascript">
 
+var toto = xhrFunction();
+console.log(toto);
+
+toto.onreadystatechange = function(){
+    if (toto.readyState == 4 && toto.status == 200){
+        alert("Bravo");
+    }
+};
+
+toto.open("GET","reponse.php?parametre1=0&parametre2=10", true);
+toto.send(null);
+
+
+//var xhr = new XMLHttpRequest();
+//console.log(xhr);
+</script>
 </body>
 </html>
