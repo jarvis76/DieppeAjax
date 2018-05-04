@@ -5,6 +5,10 @@
     <title>Dieppe Ajax</title>
 
     <script type="text/javascript" src="./functions/xhrFunction.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -15,7 +19,7 @@ console.log(toto);
 
 toto.onreadystatechange = function(){
     if (toto.readyState == 4 && toto.status == 200){
-        alert("Bravo");
+        alert(toto.responseText);
     }
 };
 
